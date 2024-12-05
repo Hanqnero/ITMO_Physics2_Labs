@@ -18,5 +18,5 @@
 После запуска решателя:
 ```
 cd reports
-$typst build 3.xx/report.typ
+$typst compile --root='.' 3.xx/report.typ
 ```
