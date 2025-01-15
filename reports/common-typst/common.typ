@@ -8,6 +8,8 @@
     first-line-indent: 1cm, justify: true, linebreaks: "optimized",
   )
 
+  // add page numbers to page footer
+  set page(numbering: "1/1" )
 
   // Align figures and put cation above tables
   show figure: set align(center)
@@ -33,7 +35,12 @@
       return "Задание " + str(nums.pos().at(1)) + ". "
     }
   )[#name]
+
+
 }
+
+
+
 
 #let TitlePage(author, group, teacher, title, id) = [
 
@@ -73,6 +80,9 @@
 
 #align(center+bottom)[Санкт-Петербург, #year г.]
 #pagebreak()
+
+// Do not count title page
+#counter(page).update(1)
 // -- TITLE PAGE ---
 // =================
 ]
