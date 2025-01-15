@@ -40,8 +40,6 @@
 }
 
 
-
-
 #let TitlePage(author, group, teacher, title, id) = [
 #set page(numbering: none)
 // =================
@@ -80,6 +78,8 @@
 
 #align(center+bottom)[Санкт-Петербург, #year г.]
 #pagebreak()
+#counter(page).update(1)
+
 // -- TITLE PAGE ---
 // =================
 ]
